@@ -4,8 +4,8 @@
           <el-form-item label="姓名" prop="name">
           <el-input v-model="dataForm.name" placeholder="姓名"></el-input>
       </el-form-item>
-          <el-form-item label="手机号" prop="phone">
-          <el-input v-model="dataForm.phone" placeholder="手机号"></el-input>
+          <el-form-item label="邮箱" prop="phone">
+          <el-input v-model="dataForm.phone" placeholder="邮箱"></el-input>
       </el-form-item>
       <el-form-item prop="gender" :label="$t('user.gender')">
         <ren-radio-group v-model="dataForm.gender" dict-type="gender"></ren-radio-group>

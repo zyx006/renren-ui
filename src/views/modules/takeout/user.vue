@@ -3,7 +3,7 @@
     <div class="mod-takeout__user}">
       <el-form :inline="true" :model="dataForm" @keyup.enter.native="getDataList()">
         <el-form-item>
-          <el-input v-model="dataForm.id" placeholder="手机号" clearable></el-input>
+          <el-input v-model="dataForm.phone" placeholder="邮箱" clearable></el-input>
         </el-form-item>
         <el-form-item>
           <el-button @click="getDataList()">{{ $t('query') }}</el-button>
@@ -22,7 +22,7 @@
         <el-table-column type="selection" header-align="center" align="center" width="50"></el-table-column>
         <el-table-column prop="id" label="ID" header-align="center" align="center"></el-table-column>
         <el-table-column prop="name" label="姓名" header-align="center" align="center"></el-table-column>
-        <el-table-column prop="phone" label="手机号" header-align="center" align="center"></el-table-column>
+        <el-table-column prop="phone" label="邮箱" header-align="center" align="center"></el-table-column>
 <!--        <el-table-column prop="gender" label="性别" header-align="center" align="center"></el-table-column>-->
         <el-table-column prop="gender" :label="$t('user.gender')" sortable="custom" header-align="center" align="center">
           <template slot-scope="scope">
@@ -79,7 +79,7 @@ export default {
         deleteIsBatch: true
       },
       dataForm: {
-        id: ''
+        phone: ''
       }
     }
   },
