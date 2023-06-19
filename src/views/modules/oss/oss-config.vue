@@ -76,6 +76,7 @@
         </el-form-item>
         <el-form-item prop="qcloudRegion" :label="$t('oss.qcloudRegion')">
           <el-select v-model="dataForm.qcloudRegion" clearable :placeholder="$t('oss.qcloudRegionTips')" class="w-percent-100">
+            <el-option value="ap-nanjing" :label="$t('oss.qcloudRegionNanjing')"></el-option>
             <el-option value="ap-beijing-1" :label="$t('oss.qcloudRegionBeijing1')"></el-option>
             <el-option value="ap-beijing" :label="$t('oss.qcloudRegionBeijing')"></el-option>
             <el-option value="ap-shanghai" :label="$t('oss.qcloudRegionShanghai')"></el-option>
