@@ -187,6 +187,7 @@ export default {
         console.log("dataListSelections",this.dataListSelections )
         console.log("mixinViewModuleOptions",this.mixinViewModuleOptions)
         params= id ? [id] : this.dataListSelections.map(item => item[this.mixinViewModuleOptions.updateStatusIsBatchKey])
+        params.unshift(status)
         console.log("status",statusArr)
         console.log("params",params)
         this.$http.put(
