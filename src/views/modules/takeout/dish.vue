@@ -3,7 +3,7 @@
     <div class="mod-takeout__dish}">
       <el-form :inline="true" :model="dataForm" @keyup.enter.native="getDataList()">
         <el-form-item>
-          <el-input v-model="dataForm.id" placeholder="菜品名称" clearable></el-input>
+          <el-input v-model="dataForm.name" placeholder="菜品名称" clearable></el-input>
         </el-form-item>
         <el-form-item>
           <el-button @click="getDataList()">{{ $t('query') }}</el-button>
@@ -112,7 +112,8 @@ export default {
       order: 'desc',
       orderField: 'update_date',
       dataForm: {
-        id: ''
+        //菜品名称
+        name: ''
       }
     }
   },

@@ -199,7 +199,7 @@ export default {
         image: '',
         description: '',
         dishList: [],
-        status: '1',
+        status: 1,
         idType: '',
       },
       headerObj: {
@@ -300,8 +300,8 @@ export default {
         this.dataForm.price = res.data.price / 100
 
         this.imageUrl = this.dataForm.image;
-        this.checkList = res.data.setmealDishes
-        this.dishTable = res.data.setmealDishes
+        // this.checkList = res.data.setmealDishes
+        // this.dishTable = res.data.setmealDishes
         this.dataForm.idType = res.data.categoryId
       }).catch(() => {
       })

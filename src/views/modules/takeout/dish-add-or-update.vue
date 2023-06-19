@@ -269,7 +269,7 @@ export default {
 
     },
     init() {
-      this.visible = true,
+      this.visible = true
       this.uploadUrl = `${window.SITE_CONFIG['apiURL']}/sys/oss/upload?token=${Cookies.get('token')}`
       this.$nextTick(() => {
         this.$refs['dataForm'].resetFields()
@@ -292,11 +292,11 @@ export default {
           ...res.data
         }
         this.dataForm.price = String(res.data.price / 100)
-        this.dishFlavors = res.data.flavors && res.data.flavors.map(obj => ({
-          ...obj,
-          value: JSON.parse(obj.value),
-          showOption: false
-        }))
+        // this.dishFlavors = res.data.flavors && res.data.flavors.map(obj => ({
+        //   ...obj,
+        //   value: JSON.parse(obj.value),
+        //   showOption: false
+        // }))
         this.imageUrl = this.dataForm.image;
 
       }).catch(() => {
@@ -454,7 +454,6 @@ export default {
             onClose: () => {
               this.visible = false
               this.$emit('refreshDataList')
-
             }
           })
         }).catch(() => {
