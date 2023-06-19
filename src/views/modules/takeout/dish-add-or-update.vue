@@ -292,11 +292,11 @@ export default {
           ...res.data
         }
         this.dataForm.price = String(res.data.price / 100)
-        // this.dishFlavors = res.data.flavors && res.data.flavors.map(obj => ({
-        //   ...obj,
-        //   value: JSON.parse(obj.value),
-        //   showOption: false
-        // }))
+        this.dishFlavors = res.data.flavors && res.data.flavors.map(obj => ({
+          ...obj,
+          value: JSON.parse(obj.value),
+          showOption: false
+        }))
         this.imageUrl = this.dataForm.image;
 
       }).catch(() => {
